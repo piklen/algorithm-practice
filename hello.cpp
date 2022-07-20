@@ -6,7 +6,8 @@ int main()
 {
     int n, k;
     bool first = 1;
-    memset(a, 0, sizeof(a)); //初始化a数组全部为0cin>>n>>k;
+    memset(a, 0, sizeof(a)); //初始化a数组全部为0
+    cin >> n >> k;
     for (int i = 1; i <= k; i++)
         for (int j = 1; j <= n; j++)
             if (j % i == 0)
