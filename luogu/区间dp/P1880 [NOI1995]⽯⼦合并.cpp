@@ -34,6 +34,7 @@ int main()
             int j = i + len - 1; // len长度右端点
             for (int k = i; k < j; k++)
             {
+                //找到分别最优解，不断叠加前一状态
                 minn[i][j] = min(minn[i][j], minn[i][k] + minn[k + 1][j] + sum[j] - sum[i - 1]);
                 maxx[i][j] = max(maxx[i][j], maxx[i][k] + maxx[k + 1][j] + sum[j] - sum[i - 1]);
             }
@@ -41,7 +42,7 @@ int main()
     }
     int ma = -INF;
     int mn = INF;
-    for (int i = 1; i <= 2 * n; i++) //找到长度为n-1的最大值
+    for (int i = 1; i <= 2 * n; i++) //找到长度为n的最大值
     {
         ma = max(ma, maxx[i][i + n - 1]);
         mn = min(mn, minn[i][i + n - 1]);
@@ -50,3 +51,5 @@ int main()
     cout << ma << endl;
     return 0;
 }
+// INF为0x3f3f3f3f莫名算不出最大值，就很神奇，可能是卡了数据带点，必须得要0x7fffffff来表示int里面的最大值
+//环状区间dp首先看成2倍长度，化曲为直。找到中间状态点k以及左右端点，分析端点以及状态表示
