@@ -8,9 +8,32 @@ struct stu
     int age;
     int score;
 };
-bool cmp(struct stu c, struct stu d)
+bool cmp(struct stu a, struct stu b)
 {
-    return c.score < d.score;
+    if (a.score < b.score)
+    {
+        return true;
+    }
+    else if (a.score > b.score)
+    {
+        return false;
+    }
+    else if (a.na < b.na)
+    {
+        return true;
+    }
+    else if (a.na > b.na)
+    {
+        return false;
+    }
+    else if (a.age < b.age)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 struct stu a[1010];
 int main()
@@ -24,32 +47,11 @@ int main()
     sort(a, a + n, cmp);
     for (int i = 0; i < n; i++)
     {
-        if (a[i].score == a[i + 1].score)
-        {
-            if (a[i].na < a[i + 1].na)
-            {
-                cout << a[i].na << " " << a[i].age << " " << a[i].score << endl;
-            }
-            else if (a[i].na > a[i + 1].na)
-            {
-                cout << a[i + 1].na << " " << a[i + 1].age << " " << a[i + 1].score << endl;
-            }
-            else
-            {
-                if (a[i].age < a[i + 1].age)
-                {
-                    cout << a[i].na << " " << a[i].age << " " << a[i].score << endl;
-                }
-                else
-                {
-                    cout << a[i + 1].na << " " << a[i + 1].age << " " << a[i + 1].score << endl;
-                }
-            }
-        }
-        else
-        {
-            cout << a[i].na << " " << a[i].age << " " << a[i].score << endl;
-        }
+        cout << a[i].na << " " << a[i].age << " " << a[i].score << endl;
     }
     return 0;
 }
+/*
+1.学习sort多重排序在结构体类型中的应用，cmp中执行的顺序是从上到下的，因为用来if else if句型所以只进一个判断
+2.sort对结构体排序是对整个排，排序的部分主要在cmp中
+*/
