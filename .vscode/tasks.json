@@ -8,11 +8,11 @@
             "type": "shell",
             "command": "gcc",
             "args": [
-                "-g", 
-                "${file}", 
-                "-o", 
+                "-g",
+                "${file}",
+                "-o",
                 "${fileBasenameNoExtension}.exe",
-                "-fexec-charset=GBK"//解决中文乱码
+                "-fexec-charset=GBK" //解决中文乱码
             ]
         }
     ],
@@ -20,7 +20,7 @@
         "echo": true,
         "reveal": "always",
         "focus": false,
-        "panel": "shared", 
+        "panel": "shared",
         "showReuseMessage": true,
         "clear": false
     }
