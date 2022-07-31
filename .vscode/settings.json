@@ -2,5 +2,6 @@
     "files.associations": {
         "iostream": "cpp"
     },
-    "c-cpp-compile-run.run-in-external-terminal": true
+    "c-cpp-compile-run.run-in-external-terminal": true,
+    "C_Cpp.errorSquiggles": "Disabled"
 }

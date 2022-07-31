@@ -18,7 +18,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole":true
+            "externalConsole": true
         },
         {
             "name": "(gdb) Launch",
@@ -31,8 +31,8 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\mgw\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
-            "preLaunchTask": "echo",//这里和task.json的label相对应
+            "miDebuggerPath": "e:\\mingw\\bin\\gdb.exe", // 自己电脑的gdb
+            "preLaunchTask": "echo", //这里和task.json的label相对应
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -40,7 +40,6 @@
                     "ignoreFailures": true
                 }
             ]
- 
         }
     ]
 }
