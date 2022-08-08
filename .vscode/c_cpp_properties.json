@@ -4,13 +4,13 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceRoot}",
-                "C:/mgw/mingw64/include/**",
-                "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
-                "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
-                "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
-                "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include",
-                "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
-                "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
+                "C:/msys64/mingw64/include/**",
+                "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../include/c++/12.1.0",
+                "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../include/c++/12.1.0/x86_64-w64-mingw32",
+                "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../include/c++/12.1.0/backward",
+                "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/include",
+                "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../include",
+                "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/include-fixed"
             ],
             "defines": [
                 "_DEBUG",
@@ -18,22 +18,28 @@
                 "__GNUC__=6",
                 "__cdecl=__attribute__((__cdecl__))"
             ],
-            "intelliSenseMode": "gcc-x64",
+            "intelliSenseMode": "msvc-x64",
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": "",
                 "path": [
                     "${workspaceRoot}",
-                    "C:/mgw/mingw64/include/**",
-                    "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
-                    "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
-                    "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
-                    "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include",
-                    "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
-                    "C:/mgw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
+                    // "d:/mingw/include/**",
+                    // "d:/mingw/bin/../lib/gcc/mingw32/8.2.0/include/c++",
+                    // "d:/mingw/bin/../lib/gcc/mingw32/8.2.0/include/c++/mingw32",
+                    // "d:/mingw/bin/../lib/gcc/mingw32/8.2.0/include/c++/backward",
+                    // "d:/mingw/bin/../lib/gcc/mingw32/8.2.0/include",
+                    // "d:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../include",
+                    // "d:/mingw/bin/../lib/gcc/mingw32/8.2.0/include-fixed"
+                    "C:/msys64/mingw64/include/**",
+                    "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../include/c++/12.1.0",
+                    "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../include/c++/12.1.0/x86_64-w64-mingw32",
+                    "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../include/c++/12.1.0/backward",
+                    "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/include",
+                    "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../include",
+                    "C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/include-fixed"
                 ]
-            },
-            "compilerPath": "C:/mgw/mingw64/bin/gcc.exe"
+            }
         }
     ],
     "version": 4
