@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>/ / memset()函数需要引入该头文件
+#include <cstring>// memset()函数需要引入该头文件
 using namespace std;
 bool a[1005];
 int main()
