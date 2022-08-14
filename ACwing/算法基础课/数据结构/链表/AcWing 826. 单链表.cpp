@@ -9,7 +9,6 @@ int e[N], ne[N], idx, head;
 // e[i] 表示节点i的值
 // ne[i] 表示节点i的next指针是多少
 // idx 存储当前已经用到了哪个点
-
 //链表初始化
 void init()
 {
