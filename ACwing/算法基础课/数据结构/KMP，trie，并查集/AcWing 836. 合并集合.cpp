@@ -7,7 +7,7 @@ int find(int x)
 {
     if (q[x] != x) //找到根节点，根节点它自己等于自己
     {
-        q[x] = find(q[x]);
+        q[x] = find(q[x]); //状态存储，明白递归中return的作用是将上一层运算的结果当这一层的参数进行传入
     }
     return q[x];
 }
@@ -25,7 +25,7 @@ int main()
         cin >> c >> a >> b;
         if (c == 'M')
         {
-            q[find(a)] = find(b); //合并集合
+            q[find(a)] = find(b); //合并集合,将a的祖宗结点指向b的祖宗结点，相当于a的祖宗结点是b的祖宗结点的子节点
         }
         else
         {
