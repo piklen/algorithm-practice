@@ -61,20 +61,20 @@ int main()
 #include <iostream>
 #include <cstring>
 using namespace std;
-const int N = 200003, null = 0x3f3f3f3f;//N的取值在数据的2~3倍的第一个质数，然后数组初始化为一个数据范围之外的数
+const int N = 200003, null = 0x3f3f3f3f; // N的取值在数据的2~3倍的第一个质数，然后数组初始化为一个数据范围之外的数
 int h[N];
-int finf(int x)
+int find(int x)
 {
     int t = (x % N + N) % N;
-    while (h[t] != null && h[t] != x)//如果这个余数不为空，并且这里面的数不是要找的哪个数，就一直往后找
+    while (h[t] != null && h[t] != x) //如果这个余数不为空，并且这里面的数不是要找的哪个数，就一直往后找
     {
         t++;
-        if (t == N)//到了数组的最后一个，就回到开头继续找
+        if (t == N) //到了数组的最后一个，就回到开头继续找
         {
             t = 0;
         }
     }
-    return t;//返回值，如果找到就返回数组下标，没有找到就返回下标值内为null的值
+    return t; //返回值，如果找到就返回数组下标，没有找到就返回下标值内为null的值
 }
 int main()
 {
@@ -90,15 +90,15 @@ int main()
         int k = find(x);
         if (s == "I")
         {
-            h[k] = x;//h[k]开始时为null然后把x进行赋值
+            h[k] = x; // h[k]开始时为null然后把x进行赋值
         }
         else
         {
-            if (h[k] != null)//如果这个返回的下标里面的值不为空，那么就说明找到了
+            if (h[k] != null) //如果这个返回的下标里面的值不为空，那么就说明找到了
             {
                 cout << "Yes" << endl;
             }
-            else//不然就是没有找到
+            else //不然就是没有找到
             {
                 cout << "No" << endl;
             }
