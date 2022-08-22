@@ -124,10 +124,11 @@ int main()
 //         for (int j = 0; i * primes[j] <= x; j++)
 //         {
 //             flag[i * primes[j]] = 1;
-//         }
 //         if (i % primes[j] == 0)
 //         {
 //             break;
 //         }
+//         }
+
 //     }
 // }
