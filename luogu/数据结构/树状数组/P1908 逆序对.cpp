@@ -53,7 +53,7 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         fic(ranks[i], 1);
-        ans += i - sum(ranks[i]);//sum(ranks[s])算的是第i个数前有几个数小于等于它如果返回的是1说明它前面没有数比他小，那么前面所有数都比它大，构成逆序对
+        ans += i - sum(ranks[i]); // sum(ranks[s])算的是第i个数前有几个数小于等于它如果返回的是1说明它前面没有数比他小，那么前面所有数都比它大，构成逆序对
     }
     printf("%lld\n", ans);
     return 0;
