@@ -56,7 +56,7 @@ int main()
         b[i].id = i;
     }
     sort(a + 1, a + 1 + n, cmp);
-    sort(b + 1, b + 1 + n, cmp);//val值进行排序，从小到大
+    sort(b + 1, b + 1 + n, cmp); // val值进行排序，从小到大
     for (int i = 1; i <= n; i++)
     {
         c[a[i].id] = b[i].id;
