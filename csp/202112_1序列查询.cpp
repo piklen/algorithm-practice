@@ -41,3 +41,4 @@ int main()
     cout << ans << endl;
     return 0;
 }
+//只需要判断区间，然后按照题意进行解答即可
