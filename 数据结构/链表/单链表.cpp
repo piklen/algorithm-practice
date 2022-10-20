@@ -130,6 +130,32 @@ void Delete(LinkList &L, int i)
     p->next = q->next;
     free(q);
 }
+//链表判空
+bool EmptyList(LinkList L)
+{
+    if (L->next)
+    {
+        return false;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+//清空链表
+void ClearList(LinkList *L)
+{
+    LinkList p, q;
+    p = (*L)->next;
+    while (p)
+    {
+        q = p->next;
+        free(p);
+        p = q;
+    }
+    (*L)->next = NULL;
+}
 int main()
 {
     cout << "使用尾插法创建链表，以输入0结束\n";
