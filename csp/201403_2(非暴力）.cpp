@@ -10,7 +10,7 @@ int get(int x, int y)
 {
     for (int i = n; i; i--)
     {
-        if (x >= ss[i].x1 && x <= ss[i].x2 && y >= ss[i].y1 && ss[i].y2 >= y)//主要在这一部分进行判断
+        if (x >= ss[i].x1 && x <= ss[i].x2 && y >= ss[i].y1 && ss[i].y2 >= y) //主要在这一部分进行判断
         {
             return i;
         }
