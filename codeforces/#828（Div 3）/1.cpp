@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstring>
 #include <string>
-#include <algorithm>
 using namespace std;
 int a[60];
 int b[60];
@@ -11,26 +10,35 @@ int main()
     cin >> t;
     while (t--)
     {
-        memset(a, 0, sizeof(a));
-        memset(b, 0, sizeof(b));
         int n;
         cin >> n;
+        string c;
+        memset(b, 0, sizeof(b));
         for (int i = 0; i < n; i++)
         {
-            int x;
-            cin >> x;
-            a[x]++;
+            cin >> a[i];
         }
+        cin >> c;
+        bool flag = false;
         for (int i = 0; i < n; i++)
         {
-            char x;
-            cin >> x;
-            b[x - 'a']++;
+            if (b[a[i]] == 0)
+            {
+                b[a[i]] = c[i];
+            }
+            else
+            {
+                if (b[a[i]] != c[i])
+                {
+                    cout << "NO" << endl;
+                    flag = true;
+                    break;
+                }
+            }
         }
-        sort(a, a + 55);
-        sort(b, b + 30);
-        for (int i = 0; i < n; i++)
+        if (!flag)
         {
+            cout << "YES" << endl;
         }
     }
     return 0;
