@@ -1,27 +1,42 @@
 #include <iostream>
-#include <cstring>// memset()函数需要引入该头文件
+#include <cstring>
 using namespace std;
-bool a[1005];
+int T, n, m, i, l, r, sum;
+string s, t;
 int main()
 {
-    int n, k;
-    bool first = 1;
-    memset(a, 0, sizeof(a)); //初始化a数组全部为0
-    cin >> n >> k;
-    for (int i = 1; i <= k; i++)
-        for (int j = 1; j <= n; j++)
-            if (j % i == 0)
-                a[j] = !a[j];
-    for (int j = 1; j <= n; j++)
+
+    cin >> T;
+    while (T--)
     {
-        if (a[j])
+        cin >> s >> t;
+        n = s.size(), s = " " + s + s;
+        m = t.size(), t = " " + t;
+        if (n < m)
         {
-            if (first) //在第1个元素前面不输出空格
-                first = 0;
-            else
-                cout << " ";
-            cout << j;
+            cout << "N\n";
+            continue;
         }
+        for (i = 1; i <= n; i++)
+        {
+            l = i, r = 1, sum = 0;
+            while (l <= i + n - 1 && r <= m)
+            {
+                if (s[l] == t[r])
+                {
+                    l++, r++, sum++;
+                }
+                else
+                {
+                    l++;
+                }
+            }
+            if (sum == m)
+            {
+                break;
+            }
+        }
+        cout << (i > n ? "N\n" : "Y\n");
     }
     return 0;
 }
