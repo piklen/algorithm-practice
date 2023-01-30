@@ -1,74 +1,32 @@
 #include <iostream>
 #include <cstring>
-#include <string>
 #include <algorithm>
 using namespace std;
+const int N = 1e6 + 10;
+int n, m;
+int w[N];
 int main()
 {
-    long long n, m;
     cin >> n >> m;
-    if (m < (n / 2))
+    for (int i = 1; i <= n; i++)
     {
-        cout << "-1" << endl;
+        w[i] = i;
     }
-    else if (m == (n / 2))
-    {
-        for (int i = 1; i <= n; i++)
-        {
-            cout << i << " ";
-        }
-        cout << endl;
-    }
-    else
-    {
-        if (n % 2) // n为奇数
-        {
-            cout << (m - ((n - 3) / 2)) << " " << 2 * (m - ((n - 3) / 2)) << " ";
-            int temp = 1;
-            cout << "temp" << endl;
-            for (int i = 3; i <= n; i++)
-            {
-                cout << "i:" << i << "temp:" << temp << endl;
-                if ((temp == (m - ((n - 3) / 2))) || (temp == (2 * (m - ((n - 3) / 2)))))
-                {
-                    temp += 2;
-                    while ((temp == (m - ((n - 3) / 2))) || (temp == (2 * (m - ((n - 3) / 2)))))
-                    {
-                        temp += 2;
-                    }
-                    cout << temp << " ";
-                }
-                else
-                {
-                    cout << temp << " ";
-                    temp++;
-                }
-            }
-            cout << endl;
-        }
-        else
-        {
-            cout << (m - ((n - 2) / 2)) << " " << 2 * (m - ((n - 2) / 2)) << " ";
-            int temp = 1;
-            for (int i = 2; i <= n; i++)
-            {
-                if ((temp == (m - ((n - 2) / 2))) || (temp == (2 * (m - ((n - 2) / 2)))))
-                {
-                    temp += 2;
-                    while ((temp == (m - ((n - 2) / 2))) || (temp == (2 * (m - ((n - 2) / 2)))))
-                    {
-                        temp += 2;
-                    }
-                    cout << temp << " ";
-                }
-                else
-                {
-                    cout << temp << " ";
-                    temp++;
-                }
-            }
-            cout << endl;
-        }
-    }
+    sort(w + 1, w + 1 + n, [](int a, int b)
+         { int s1 = 0, s2 = 0, x = a, y = b;
+         while(x){
+             s1 += (x % 10);
+             x /= 10;
+         } 
+         while(y){
+             s2 += (y % 10);
+             y /= 10;
+         } 
+         if(s1!=s2)
+         {
+             return s1 < s2;
+         }
+         return a<b; });
+    cout << w[m] << endl;
     return 0;
 }

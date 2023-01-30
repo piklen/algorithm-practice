@@ -2,9 +2,12 @@
 using namespace std;
 int main()
 {
-    long long a, b, n; //会爆int
-    cin >> a >> b >> n;
-    long long ans = 0;
-    ans = n * a + n * (n - 1) * (b - a) / 2;
-    cout << ans << endl;
+    for (int i = 4; i <= 4; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            cout << "i:" << i << "  j:" << j << "   i^j:" << (i ^ j) << endl;
+        }
+    }
+    return 0;
 }

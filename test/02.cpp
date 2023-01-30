@@ -1,9 +1,16 @@
 #include <iostream>
 using namespace std;
-int main(int argc, char *argv[])
+int main()
 {
-    cout << "共输入了" << argc << "分别是:\n";
-    for (int i = 0; i < argc; ++i)
-        cout << argv[i] << endl;
+    char *pch1, *pch2;
+    pch1 = new char;
+    pch2 = pch1;
+    *pch2 = 'B';
+    delete pch1;
+    pch1 = NULL;
+    cout << pch2 << endl;
+    delete pch2;
+    pch2 = NULL;
+    cout << pch2 << endl;
     return 0;
 }
